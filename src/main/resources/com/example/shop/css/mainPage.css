@@ -1,0 +1,147 @@
+.MenuBar{
+    -fx-background-color: c7faff;
+    -fx-text-fill: white;
+}
+
+.Menu{
+    -fx-text-fill: white;
+}
+
+.scroll{
+    -fx-background-color: #c7faff;
+    -fx-text-fill: #A52A2A;
+}
+
+.root{
+    -fx-background-color: #ffffff; /* Нежный розовый фон */
+}
+
+.scroll-pane {
+    -fx-background: #ffffff;
+    -fx-border-color: transparent;
+}
+
+.scroll-pane .viewport {
+    -fx-background: transparent;
+}
+
+
+/* Стили для карточек автомобилей */
+.card-box {
+    -fx-background-color: #ffffff; /* Светлый фон */
+    -fx-padding: 15; /* Внутренние отступы */
+    -fx-spacing: 10; /* Расстояние между элементами */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 4); /* Тень */
+    -fx-font-size: 14px; /* Размер шрифта */
+    -fx-text-fill: #333; /* Цвет текста */
+    -fx-alignment: center;
+    -fx-border-radius: 25;
+    -fx-background-radius: 25;
+}
+
+.card-box Label {
+    -fx-font-weight: bold; /* Жирный шрифт для меток */
+    -fx-text-fill: black;
+}
+
+.card-box ImageView {
+    -fx-alignment: center; /* Центрирование изображения */
+    -fx-border-radius: 10; /* Скругленные углы для изображений */
+}
+
+#carInfoContainer {
+    -fx-spacing: 20; /* Расстояние между карточками */
+    -fx-alignment: center;
+    -fx-min-width: 700px;
+    -fx-max-width: 700px;
+    -fx-border-radius: 25; /* Скругленные углы */
+    -fx-background-radius: 25; /* Скругленные углы фона */
+}
+
+.but{
+    -fx-background-color: #6400ea;
+    -fx-text-fill: white;
+}
+
+.cart-item-name {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+}
+
+.cart-item-price, .cart-item-quantity, .cart-item-total {
+    -fx-font-size: 14px;
+    -fx-text-fill: black;
+}
+
+.cart-box {
+    -fx-background-color: #f9f9f9;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 10px;
+    -fx-padding: 10px;
+    -fx-spacing: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0, 0, 1);
+}
+
+.order-box{
+    -fx-background-color: #ffffff; /* Светлый фон */
+    -fx-padding: 15; /* Внутренние отступы */
+    -fx-spacing: 10px;  /* Отступы между элементами внутри карточки */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 4); /* Тень */
+    -fx-font-size: 14px; /* Размер шрифта */
+    -fx-text-fill: #333; /* Цвет текста */
+    -fx-alignment: center;
+    -fx-border-radius: 25;
+    -fx-background-radius: 25;
+}
+
+.order-box Label {
+    -fx-font-weight: bold; /* Жирный шрифт для меток */
+    -fx-text-fill: black;
+}
+
+/* Контейнер заказов */
+.orders-container {
+    -fx-background-color: #f5f5f5; /* Светло-серый фон */
+    -fx-padding: 20px;
+    -fx-spacing: 15px;
+}
+
+/* Карточка товара */
+.order-card {
+    -fx-background-color: #ffffff; /* Белый фон */
+    -fx-border-color: #dcdcdc; /* Светло-серая граница */
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-padding: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0, 2, 2);
+}
+
+/* Заголовок товара */
+.order-product-label {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+/* Цена */
+.order-price-label,
+.order-quantity-label,
+.order-item-total-price-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #555555;
+}
+
+/* Заголовок заказа */
+.order-label {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2a2a2a;
+}
+
+/* Общая сумма */
+.total-price-label {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #750eff;
+}
