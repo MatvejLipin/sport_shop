@@ -141,6 +141,7 @@ public class MainPageController {
         Button addToCartButton = new Button("Добавить в корзину");
         addToCartButton.setOnAction(e -> {
             shoppingCart.addItem(product);
+            AlertManager.showInfoAlert("Корзина", "Товар успешно добавлен в корзину");
         });
 
         textContainer.getChildren().addAll(nameLabel, priceLabel, addToCartButton);

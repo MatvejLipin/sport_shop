@@ -8,10 +8,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.Optional;
 
 public class EditProductController {
@@ -229,8 +226,12 @@ public class EditProductController {
                     PreparedStatement stmt = conn.prepareStatement(deleteQuery);
                     stmt.setInt(1, product.getId());
                     stmt.executeUpdate();
-                } catch (SQLException e) {
-                    e.printStackTrace();
+                }
+                catch (SQLIntegrityConstraintViolationException e) {
+                    AlertManager.showErrorAlert("Ошибка удаления", "Нельзя удалить товар, так как он есть в заказах или в листе ожидания.");
+                }
+                catch (SQLException e) {
+                    AlertManager.showErrorAlert("Ошибка базы данных", "Не удалось удалить товар: " + e.getMessage());
                 }
 
                 mainPageController.loadProducts(""); // Обновление главной страницы

@@ -1,7 +1,5 @@
 package com.example.shop;
 
-import java.util.Objects;
-
 public class Product {
     private int productId;
     private String name;
@@ -67,6 +65,6 @@ public class Product {
 
     @Override
     public int hashCode() {
-        return Objects.hash(productId);
+        return Integer.hashCode(productId);
     }
 }

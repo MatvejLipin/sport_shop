@@ -15,6 +15,6 @@
             </content>
         </ScrollPane>
         <Label fx:id="totalPriceLabel" text="Итого: 0 ₽" />
-        <Button fx:id="checkoutButton" text="Оформить заказ" onAction="#checkout" />
+        <Button fx:id="checkoutButton" text="Начать оформление" onAction="#checkout" />
     </children>
 </VBox>
