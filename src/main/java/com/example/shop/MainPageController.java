@@ -22,6 +22,8 @@ public class MainPageController {
     @FXML
     private Button refactorBut;
     @FXML
+    private ImageView cartBut;
+    @FXML
     private TextField searchField; // Поле для ввода поискового запроса
     @FXML
     private ComboBox<String> manufacturerFilter; // Фильтр по производителю
@@ -29,6 +31,7 @@ public class MainPageController {
     private ComboBox<String> sportFilter; // Фильтр по категории (спорту)
 
     private DatabaseConnection dbConnection = new DatabaseConnection();
+    private ShoppingCart shoppingCart = new ShoppingCart();
 
     public int userId = -1;
     public String userRole = "";
@@ -135,7 +138,12 @@ public class MainPageController {
         Label priceLabel = new Label("Цена: " + product.getPrice() + " ₽");
         priceLabel.setStyle("-fx-font-size: 14px; -fx-text-fill: #d32f2f;");
 
-        textContainer.getChildren().addAll(nameLabel, priceLabel);
+        Button addToCartButton = new Button("Добавить в корзину");
+        addToCartButton.setOnAction(e -> {
+            shoppingCart.addItem(product);
+        });
+
+        textContainer.getChildren().addAll(nameLabel, priceLabel, addToCartButton);
         card.getChildren().addAll(productImage, textContainer);
 
         card.setOnMouseClicked(event -> openProductModal(product));
@@ -214,5 +222,23 @@ public class MainPageController {
     @FXML
     private void openManageProducts() {
         ManageProductsController.openManager(this);
+    }
+
+    @FXML
+    private void openCart() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/shop/cart.fxml"));
+            Stage stage = new Stage();
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.setTitle("Корзина");
+            stage.setScene(new Scene(loader.load()));
+
+            CartController controller = loader.getController();
+            controller.setShoppingCart(shoppingCart);
+
+            stage.showAndWait();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

@@ -4,13 +4,14 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.control.Label?>
 <AnchorPane prefHeight="700.0" prefWidth="1017.0" styleClass="root" stylesheets="@css/mainPage.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.shop.MainPageController">
     <children>
         <ImageView fitHeight="71.0" fitWidth="70.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
@@ -24,7 +25,7 @@
                 <VBox fx:id="cardContainer" />
             </content>
         </ScrollPane>
-        <ImageView fx:id="cardBut" fitHeight="47.0" fitWidth="56.0" layoutX="877.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fx:id="cartBut" fitHeight="47.0" fitWidth="56.0" layoutX="877.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" onMouseClicked="#openCart">
             <image>
                 <Image url="@cart.png" />
             </image>
