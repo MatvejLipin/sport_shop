@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.shop.ManageProductsController">
+    <ListView fx:id="productListView" prefHeight="300"/>
+    <HBox spacing="10">
+        <Button fx:id="addButton" text="Добавить"/>
+        <Button fx:id="editButton" text="Редактировать"/>
+    </HBox>
+</VBox>

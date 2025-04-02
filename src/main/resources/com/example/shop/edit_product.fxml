@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.shop.EditProductController" spacing="10" style="-fx-padding: 20;">
+    <Label text="Название"/>
+    <TextField fx:id="nameField"/>
+
+    <Label text="Описание"/>
+    <TextArea fx:id="descriptionField"/>
+
+    <Label text="Цена"/>
+    <TextField fx:id="priceField"/>
+
+    <Label text="URL изображения"/>
+    <TextField fx:id="imageUrlField"/>
+
+    <Label text="Кол/во на складе"/>
+    <TextField fx:id="stockQuantityField"/>
+
+    <ComboBox fx:id="manufacturerComboBox" promptText="Выберите бренд"/>
+
+    <ComboBox fx:id="sportComboBox" promptText="Выберите категорию"/>
+
+    <HBox spacing="10">
+        <Button fx:id="saveButton" text="Сохранить" onAction="#saveProduct"/>
+        <Button fx:id="deleteButton" text="Удалить" onAction="#deleteProduct"/>
+    </HBox>
+</VBox>
